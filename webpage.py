@@ -35,7 +35,7 @@ def show_greeting():
             100% { opacity: 1; }
         }
         </style>
-        <img src="doctor_image.png" class="doctor-image" alt="Dr. Health">
+        <img src="hidoc.png" class="doctor-image" alt="Dr. Health">
         """, unsafe_allow_html=True)
     
     st.markdown("<h3 style='text-align: center;'>Hi! How can I assist you today?</h3>", unsafe_allow_html=True)
