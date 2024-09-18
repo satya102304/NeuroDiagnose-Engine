@@ -28,16 +28,16 @@ def show_greeting():
         <style>
         .doctor-image {
             animation: fadeIn 3s ease forwards;
+            width: 100%; /* Use CSS for width */
         }
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
         </style>
+        <img src="doctor_image.png" class="doctor-image" alt="Dr. Health">
         """, unsafe_allow_html=True)
     
-    # Doctor image with the animated "Hi" message
-    st.image("doctor_image.png", caption="Dr. Health", use_column_width=True, class_="doctor-image")
     st.markdown("<h3 style='text-align: center;'>Hi! How can I assist you today?</h3>", unsafe_allow_html=True)
     
     time.sleep(3)  # Pause for effect before moving to the chatbot
