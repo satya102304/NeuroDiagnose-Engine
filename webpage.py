@@ -33,7 +33,7 @@ def animated_doctor():
             animation: fadeOut 5s forwards;  /* Animation lasts 5 seconds */
         }
         </style>
-        <img class="doctor-img" src="https://path-to-your-doctor-image.gif" alt="Doctor">
+        <img class="hidoc.png" src="https://github.com/satya102304/NeuroDiagnose-Engine/blob/main/hidoc.png" alt="Doctor">
         """, unsafe_allow_html=True
     )
 
