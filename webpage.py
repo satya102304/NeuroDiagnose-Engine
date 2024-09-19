@@ -9,13 +9,6 @@ def login():
             st.session_state["logged_in"] = True
             st.experimental_rerun()  # Refresh to load chat area
 
-if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
-    st.title("Healthcare Chatbot Login")
-    login()
-else:
-    st.experimental_rerun()  # Load chat area after successful login
-import streamlit as st
-
 # Function to display animated doctor picture
 def animated_doctor():
     st.markdown(
@@ -30,10 +23,10 @@ def animated_doctor():
             top: 50px;
             right: 50px;
             width: 150px;
-            animation: fadeOut 5s forwards;  /* Animation lasts 5 seconds */
+            animation: fadeOut 2s forwards;  /* Reduced animation duration to 2 seconds */
         }
         </style>
-        <img class="hidoc.png" src="https://github.com/satya102304/NeuroDiagnose-Engine/blob/main/hidoc.png" alt="Doctor">
+        <img class="doctor-img" src="https://github.com/satya102304/NeuroDiagnose-Engine/blob/main/hidoc.png" alt="Doctor">
         """, unsafe_allow_html=True
     )
 
@@ -49,3 +42,6 @@ def chat_ui():
 
 if "logged_in" in st.session_state and st.session_state["logged_in"]:
     chat_ui()
+else:
+    st.title("Healthcare Chatbot Login")
+    login()
